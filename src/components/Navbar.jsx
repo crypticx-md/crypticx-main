@@ -57,7 +57,7 @@ export default function Navbar() {
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/30 to-violet-500/30 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
             <img
-              src="/logo11.png"
+              src="/public/Black bg crypticx logo.png"
               alt="CrypticX"
               className={`relative h-14 w-14 object-contain md:h-16 md:w-16 ${scrolled ? 'md:h-14 md:w-14' : ''}`}
             />
