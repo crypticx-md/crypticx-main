@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import EmailButton from './components/EmailButton';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import ServiceInquiry from './pages/ServiceInquiry';
 import Trading from './pages/Trading';
 import Academy from './pages/Academy';
 import About from './pages/About';
@@ -30,6 +31,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:slug" element={<ServiceInquiry />} />
               <Route path="/trading" element={<Trading />} />
               <Route path="/academy" element={<Academy />} />
               <Route path="/about" element={<About />} />

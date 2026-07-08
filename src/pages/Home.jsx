@@ -112,10 +112,10 @@ function Home() {
   ];
 
   const stats = [
-    { value: '10K+', label: 'Active learners' },
+    { value: '5k+', label: 'community members' },
     { value: '50M+', label: 'Trading volume' },
-    { value: '100+', label: 'Projects shipped' },
-    { value: '95%', label: 'Satisfaction' },
+    { value: '80+', label: 'Projects shipped' },
+    { value: '95%', label: 'Trading Success rate' },
   ];
 
   return (
