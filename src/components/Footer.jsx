@@ -30,7 +30,7 @@ function Footer() {
               CrypticX
             </h3>
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
-              Technology, trading, and education — built for clarity and long-term growth in the digital economy.
+              A venture studio that builds AI products, SaaS businesses, digital platforms, trading technology, educational programs, and future technology ventures.
             </p>
           </div>
 
@@ -101,10 +101,10 @@ function Footer() {
               <div className="flex items-start gap-2">
                 <FaEnvelope className="mt-0.5 shrink-0 text-slate-500" />
                 <a
-                  href="mailto:crypticxglobal@gmail.com"
+                  href="mailto:info@crypticx.io"
                   className="break-all text-sm text-slate-400 hover:text-cyan-300"
                 >
-                  crypticxglobal@gmail.com
+                  info@crypticx.io
                 </a>
               </div>
             </div>
