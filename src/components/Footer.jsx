@@ -174,7 +174,7 @@ function Footer() {
   <div className="space-y-2 text-sm text-slate-500">
 
     <p className="text-base font-semibold text-white">
-      CrypticX Ltd
+      CRYPTICX TECHNOLOGIES Ltd
     </p>
 
     <p>
