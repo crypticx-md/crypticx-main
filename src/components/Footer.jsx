@@ -182,14 +182,14 @@ function Footer() {
     </p>
 
     <p>
-      Company Number: <span className="text-slate-300">YOUR_COMPANY_NUMBER</span>
+      Company Number: <span className="text-slate-300">17374203</span>
     </p>
 
     <p>
       Registered Office:
       <br />
       <span className="text-slate-300">
-        YOUR_REGISTERED_OFFICE_ADDRESS
+        128 City Road, London, United Kingdom, EC1V 2NX
       </span>
     </p>
 
