@@ -137,9 +137,79 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} CrypticX. All rights reserved.
-        </div>
+        <div className="mt-12 border-t border-white/10 pt-8 text-center">
+
+  {/* Legal Links */}
+  <div className="mb-6 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+    <a
+      href="/privacy-policy"
+      className="transition hover:text-cyan-400"
+    >
+      Privacy Policy
+    </a>
+
+    <a
+      href="/terms-and-conditions"
+      className="transition hover:text-cyan-400"
+    >
+      Terms & Conditions
+    </a>
+
+    <a
+      href="/cookie-policy"
+      className="transition hover:text-cyan-400"
+    >
+      Cookie Policy
+    </a>
+
+    <a
+      href="/careers"
+      className="transition hover:text-cyan-400"
+    >
+      Careers
+    </a>
+  </div>
+
+  {/* Company Information */}
+  <div className="space-y-2 text-sm text-slate-500">
+
+    <p className="text-base font-semibold text-white">
+      CrypticX Ltd
+    </p>
+
+    <p>
+      Registered in England and Wales
+    </p>
+
+    <p>
+      Company Number: <span className="text-slate-300">YOUR_COMPANY_NUMBER</span>
+    </p>
+
+    <p>
+      Registered Office:
+      <br />
+      <span className="text-slate-300">
+        YOUR_REGISTERED_OFFICE_ADDRESS
+      </span>
+    </p>
+
+    <p>
+      Email:&nbsp;
+      <a
+        href="mailto:info@crypticx.io"
+        className="text-cyan-400 hover:text-cyan-300"
+      >
+        info@crypticx.io
+      </a>
+    </p>
+
+    <p className="pt-4 text-slate-600">
+      © {new Date().getFullYear()} CrypticX Ltd. All rights reserved.
+    </p>
+
+  </div>
+
+</div>
       </div>
     </footer>
   );
