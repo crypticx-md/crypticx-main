@@ -44,7 +44,7 @@ const projects = [
     title: 'WorkXora',
     description:
       'A services marketplace connecting customers with skilled professionals across Ireland and the UK. Find professionals, post jobs, and arrange everyday services through one platform.',
-    status: 'In Development',
+    status: 'In Planning',
     category: 'Services / Marketplace',
     icon: FaBriefcase,
     accent: 'from-sky-500 to-indigo-600',
