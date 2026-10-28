@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGamepad, FaCoins, FaBrain, FaChartLine } from 'react-icons/fa';
+import { FaGamepad, FaCoins, FaBrain, FaChartLine, FaBriefcase } from 'react-icons/fa';
 
 const projects = [
   {
@@ -38,6 +38,16 @@ const projects = [
     category: 'AI / FinTech',
     icon: FaChartLine,
     accent: 'from-emerald-500 to-teal-600',
+  },
+  {
+    title: 'WorkXora',
+    description:
+      'A services marketplace connecting customers with skilled professionals across Ireland and the UK. Find professionals, post jobs, and arrange everyday services through one platform.',
+    status: 'In Development',
+    category: 'Services / Marketplace',
+    icon: FaBriefcase,
+    accent: 'from-sky-500 to-indigo-600',
+    url: 'https://workxora.com',
   },
 ];
 
@@ -86,6 +96,11 @@ function OurProjects() {
               <p className="leading-relaxed text-slate-600 dark:text-slate-400">
                 {project.description}
               </p>
+              {project.url && (
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-medium text-cyan-600 hover:underline dark:text-cyan-300">
+                  Visit website →
+                </a>
+              )}
               <div className="mt-6 flex items-center gap-2 border-t border-slate-200/80 pt-6 dark:border-white/10">
                 <span className="text-sm text-slate-500 dark:text-slate-500">Status</span>
                 <span className="text-sm font-medium text-violet-600 dark:text-violet-300">
