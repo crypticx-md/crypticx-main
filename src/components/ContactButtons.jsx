@@ -10,14 +10,14 @@ function ContactButtons() {
   const contacts = {
     whatsapp: [
       {
+        number: "447400754677",
+        type: "whatsapp",
+        label: "UK"
+      },
+      {
         number: "353899504694",
         type: "whatsapp",
         label: "Ireland"
-      },
-      {
-        number: "923181010080",
-        type: "whatsapp",
-        label: "Pakistan"
       }
     ]
   };
