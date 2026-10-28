@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { CONTACT_EMAIL } from '../data/contact';
 import {
   FaEnvelope,
   FaFilePdf,
@@ -12,6 +14,8 @@ import {
 
 function Contact() {
   const [selectedFile, setSelectedFile] = useState('');
+  const [searchParams] = useSearchParams();
+  const submitted = searchParams.get('submitted') === 'true';
 
   return (
     <div className="min-h-screen px-4 py-16 sm:px-6 lg:px-8">
@@ -26,6 +30,11 @@ function Contact() {
           </p>
         </div>
 
+        {submitted && (
+          <div role="status" className="mb-8 rounded-2xl border border-emerald-300/60 bg-emerald-50 p-5 text-emerald-900 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-100">
+            Your request has been submitted. Our team will review it and respond by email.
+          </div>
+        )}
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="glass-panel space-y-6 p-8 md:p-10">
             <div>
@@ -42,7 +51,7 @@ function Contact() {
             </div>
 
             <a
-              href="mailto:mdfahad041123@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white/50 p-4 transition-all hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-glow-sm dark:border-white/10 dark:bg-slate-900/40"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 text-white">
@@ -53,13 +62,13 @@ function Contact() {
                   Email
                 </p>
                 <p className="font-medium text-slate-900 dark:text-white">
-                  mdfahad041123@gmail.com
+                  {CONTACT_EMAIL}
                 </p>
               </div>
             </a>
 
             <a
-              href="https://wa.me/353899504694"
+              href="https://wa.me/447400754677"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white/50 p-4 transition-all hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-glow-sm dark:border-white/10 dark:bg-slate-900/40"
@@ -72,7 +81,7 @@ function Contact() {
                   WhatsApp
                 </p>
                 <p className="font-medium text-slate-900 dark:text-white">
-                  Ireland & Pakistan numbers
+                  UK WhatsApp
                 </p>
               </div>
             </a>
@@ -98,7 +107,7 @@ function Contact() {
           </div>
 
           <form
-            action="https://formsubmit.co/mdfahad041123@gmail.com"
+            action={`https://formsubmit.co/${CONTACT_EMAIL}`}
             method="POST"
             encType="multipart/form-data"
             className="glass-panel relative overflow-hidden p-6 md:p-8"
@@ -113,7 +122,8 @@ function Contact() {
             />
 
             <input type="hidden" name="_subject" value="New IT services inquiry from CrypticX" />
-            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <input type="hidden" name="_template" value="table" />
 
             <div className="relative">
@@ -194,7 +204,7 @@ function Contact() {
                     type="file"
                     name="attachment"
                     accept="application/pdf,.pdf"
-                    required
+                    
                     className="sr-only"
                     onChange={(event) => {
                       setSelectedFile(event.target.files?.[0]?.name || '');
@@ -213,14 +223,15 @@ function Contact() {
               </label>
             </div>
 
-            <button type="submit" className="btn-primary relative mt-7 w-full gap-2 py-4 text-base">
+            <p className="mt-6 text-xs text-slate-500 dark:text-slate-400">We use your details to respond to your enquiry. See our <Link to="/privacy-policy" className="underline hover:text-cyan-500">Privacy Policy</Link>.</p>
+            <button type="submit" className="btn-primary relative mt-5 w-full gap-2 py-4 text-base">
               Send project request
               <FaPaperPlane />
             </button>
 
             <p className="relative mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
               Your details and PDF will be submitted to
-              {' '}mdfahad041123@gmail.com.
+              {' '}{CONTACT_EMAIL}.
             </p>
           </form>
         </div>
