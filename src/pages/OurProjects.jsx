@@ -32,6 +32,7 @@ const projects = [
   },
   {
     title: 'TradeMind AI',
+    url: 'https://trademind.crypticx.io',
     description:
       'An AI-powered trading intelligence platform built to analyze markets, generate trade setups, and provide professional-grade insights for traders.',
     status: 'In Planning',
