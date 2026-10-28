@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaEnvelope } from 'react-icons/fa';
+import { CONTACT_EMAIL } from '../data/contact';
 
 function EmailButton() {
-  const email = 'crypticxglobal@gmail.com';
+  const email = CONTACT_EMAIL;
 
   return (
     <a

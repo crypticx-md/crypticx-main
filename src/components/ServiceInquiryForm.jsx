@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaEnvelope,
   FaFileAlt,
@@ -34,7 +35,7 @@ function ServiceInquiryForm({ serviceTitle, serviceSlug }) {
         name="_subject"
         value={`New ${serviceTitle} inquiry from CrypticX`}
       />
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="service" value={serviceTitle} />
       <input
@@ -140,7 +141,8 @@ function ServiceInquiryForm({ serviceTitle, serviceSlug }) {
         </label>
       </div>
 
-      <button type="submit" className="btn-primary relative mt-7 w-full gap-2 py-4 text-base">
+      <p className="mt-6 text-xs text-slate-500 dark:text-slate-400">We use your details to respond to your enquiry. See our <Link to="/privacy-policy" className="underline hover:text-cyan-500">Privacy Policy</Link>.</p>
+      <button type="submit" className="btn-primary relative mt-5 w-full gap-2 py-4 text-base">
         Submit inquiry
         <FaPaperPlane />
       </button>

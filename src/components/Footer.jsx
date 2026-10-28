@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CONTACT_EMAIL } from '../data/contact';
 import { FaWhatsapp, FaTelegram, FaEnvelope } from 'react-icons/fa';
 
 function Footer() {
@@ -101,10 +102,10 @@ function Footer() {
               <div className="flex items-start gap-2">
                 <FaEnvelope className="mt-0.5 shrink-0 text-slate-500" />
                 <a
-                  href="mailto:info@crypticx.io"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="break-all text-sm text-slate-400 hover:text-cyan-300"
                 >
-                  info@crypticx.io
+                  {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
@@ -112,28 +113,14 @@ function Footer() {
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
-              Updates
+              Start a project
             </h3>
             <p className="mb-4 text-sm text-slate-400">
-              Subscribe for product news and academy openings.
+              Need a website, web app, or mobile app? Tell us about your project and get a tailored response.
             </p>
-            <form
-              className="relative"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="you@email.com"
-                className="w-full rounded-xl border border-white/10 bg-slate-900/80 py-3 pl-4 pr-24 text-sm text-white placeholder-slate-500 outline-none ring-cyan-500/40 transition-shadow focus:ring-2"
-                aria-label="Newsletter email"
-              />
-              <button
-                type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-gradient-to-r from-cyan-500 to-violet-600 px-3 py-1.5 text-xs font-semibold text-white"
-              >
-                Join
-              </button>
-            </form>
+            <Link to="/contact" className="inline-flex rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+              Request a quote
+            </Link>
           </div>
         </div>
 
@@ -162,12 +149,7 @@ function Footer() {
       Cookie Policy
     </a>
 
-    <a
-      href="/careers"
-      className="transition hover:text-cyan-400"
-    >
-      Careers
-    </a>
+
   </div>
 
   {/* Company Information */}
@@ -196,10 +178,10 @@ function Footer() {
     <p>
       Email:&nbsp;
       <a
-        href="mailto:info@crypticx.io"
+        href={`mailto:${CONTACT_EMAIL}`}
         className="text-cyan-400 hover:text-cyan-300"
       >
-        info@crypticx.io
+        {CONTACT_EMAIL}
       </a>
     </p>
 

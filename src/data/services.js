@@ -9,7 +9,7 @@ import {
   FaShieldAlt
 } from 'react-icons/fa';
 
-export const SERVICE_INQUIRY_EMAIL = 'crypticx.md@gmail.com';
+export { CONTACT_EMAIL as SERVICE_INQUIRY_EMAIL } from './contact';
 
 export const services = [
   {

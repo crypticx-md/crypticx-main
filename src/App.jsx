@@ -12,6 +12,7 @@ import Academy from './pages/Academy';
 import About from './pages/About';
 import OurProjects from './pages/OurProjects';
 import Contact from './pages/Contact';
+import { PrivacyPolicy, TermsAndConditions, CookiePolicy } from './pages/LegalPages';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<OurProjects />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
             </Routes>
           </main>
           <EmailButton />
