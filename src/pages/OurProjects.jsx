@@ -34,7 +34,7 @@ const projects = [
     title: 'TradeMind AI',
     description:
       'An AI-powered trading intelligence platform built to analyze markets, generate trade setups, and provide professional-grade insights for traders.',
-    status: 'In Development',
+    status: 'In Planning',
     category: 'AI / FinTech',
     icon: FaChartLine,
     accent: 'from-emerald-500 to-teal-600',
