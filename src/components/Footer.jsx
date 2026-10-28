@@ -6,8 +6,8 @@ function Footer() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const contacts = [
+    { number: '+447400754677', type: 'whatsapp', label: 'UK' },
     { number: '+353899504694', type: 'both', label: 'Ireland' },
-    { number: '+923181010080', type: 'whatsapp', label: 'Pakistan' },
   ];
 
   const quickLinks = [
@@ -88,7 +88,7 @@ function Footer() {
                 </div>
 
                 <a
-                  href={`https://t.me/${contacts[0].number.replace('+', '')}`}
+                  href="https://t.me/353899504694"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0088cc] text-white shadow-lg shadow-sky-900/30 transition-transform hover:scale-105"
